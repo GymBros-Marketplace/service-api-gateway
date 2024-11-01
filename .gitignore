@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.json
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebooks / IDE
+.ipynb_checkpoints
+.DS_Store
+.vscode
+.idea
+.venv
+.env*
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache
+
+# Temporary files for local users
+tmp/
