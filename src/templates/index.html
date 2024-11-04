@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин одежды</title>
+</head>
+<body>
+    <h1>Добро пожаловать, {{ user }}!</h1>
+    <a href="/logout">Выйти</a>
+    
+    <h2>Список товаров</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                <a href="/product/{{ product['id'] }}">{{ product['name'] }} - {{ product['price'] }} руб.</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Добавить новый товар</h2>
+    <form action="/add_product" method="post">
+        <input type="text" name="name" placeholder="Название" required>
+        <input type="number" name="price" placeholder="Цена" required>
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>

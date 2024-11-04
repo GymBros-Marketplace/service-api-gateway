@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product['name'] }}</title>
+</head>
+<body>
+    <h1>{{ product['name'] }}</h1>
+    <p>Цена: {{ product['price'] }} руб.</p>
+    <form action="/delete_product" method="post">
+        <input type="hidden" name="product_id" value="{{ product['id'] }}">
+        <button type="submit">Удалить товар</button>
+    </form>
+    <a href="/">Вернуться на главную</a>
+</body>
+</html>
